@@ -1,1 +1,23 @@
+$body-bg: hsl(0, 0%, 98%);
+
+$primary: #011627;
+$secondary: #fdfffc;
+$warning: #ff9f1c;
+$danger: #e71d36;
+
+$grey-lighter: hsl(0, 0%, 96%);
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+.recipe-image {
+  max-height: 256px;
+  object-fit: cover;
+}
+
+.header {
+  background-color: $grey-lighter;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 50px 0 50px 0;
+}
