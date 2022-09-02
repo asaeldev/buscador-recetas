@@ -1,12 +1,7 @@
 import "./scss/main.scss";
 import * as bootstrap from "bootstrap";
+import "./js/home";
+import { nextPage, previousPage } from "./js/home";
 
-import { getMealsByFirstLetter, getMealsByName } from "./js/api";
-
-(async () => {
-  let response = await getMealsByName("Arrabiata");
-  console.log(response);
-
-  response = await getMealsByFirstLetter("A");
-  console.log(response);
-})();
+window.nextPage = nextPage;
+window.previousPage = previousPage;
