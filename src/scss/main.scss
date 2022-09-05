@@ -19,6 +19,12 @@ body{
 .recipe-image {
   max-height: 256px;
   object-fit: cover;
+  cursor: pointer;
+  transition: .5s ease;
+
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 .header {
