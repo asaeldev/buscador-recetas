@@ -7,10 +7,10 @@
     <title>BEDU - Buscador de recetas</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">BEDU</a>
+        <div class="container">
+          <a class="navbar-brand" href="/">Buscador de recetas</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -42,7 +42,7 @@
       <div class="row mt-5">
         <div class="col-md-5 mt-2">
           <div class="card">
-            <form onsubmit="(e) => {e.preventDefault();}">
+            <form id="recipeForm">
               <div class="card-header">
                 <i class="bi-search"></i>
                 <b>Buscar recetas</b>
@@ -81,15 +81,18 @@
                       class="form-control"
                       placeholder="Arrabiata, Mediterranean Pasta, Chilli, etcétera...  "
                     />
-                    <p class="small invalid-feedback"></p>
+                    <p id="searchInputFeedback" class="small invalid-feedback"></p>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
-                <button id="searchBtn" href="#" class="btn btn-primary">
+                <button id="searchBtn" class="btn btn-primary" type="submit">
                   Buscar ahora
                 </button>
-                <a href="#" class="btn btn-outline-primary"
+                <a
+                  href="#"
+                  id="searchRandomRecipe"
+                  class="btn btn-outline-primary"
                   >Obtener receta aleatoria</a
                 >
               </div>
@@ -131,12 +134,11 @@
           <h2><i class="bi-book"></i> Documentación</h2>
         </div>
         <article>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-            et nisi unde maiores? Perspiciatis inventore non, possimus doloribus
-            quia labore culpa, rem modi blanditiis quibusdam neque vitae
-            nesciunt quisquam fugiat.
-          </p>
+          <h5>Integrantes</h4>
+          <ul>
+            <li>Asael Hernández (asael.dev@gmail.com)</li>
+            <li>Diego Mendoza</li>
+          </ul>
         </article>
       </section>
 

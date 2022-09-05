@@ -4,8 +4,7 @@ import config from "./config";
 const getMealsByName = async (mealName) => {
   try {
     const response = await fetch(`${config.API_URL}search.php?s=${mealName}`);
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
     throw new Error(error);
   }
@@ -16,11 +15,19 @@ const getMealsByFirstLetter = async (firstLetter) => {
     const response = await fetch(
       `${config.API_URL}search.php?f=${firstLetter}`
     );
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export { getMealsByName, getMealsByFirstLetter };
+const getRandomRecipe = async () => {
+  try {
+    const response = await fetch(`${config.API_URL}random.php`);
+    return await response.json();
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export { getMealsByName, getMealsByFirstLetter, getRandomRecipe };
